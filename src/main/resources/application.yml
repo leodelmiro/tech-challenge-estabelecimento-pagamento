@@ -1,0 +1,32 @@
+aws:
+  region: ${AWS_REGION:us-east-1}
+
+amazon:
+  dynamodb:
+    endpoint: ${DYNAMODB_URL:http://host.docker.internal:4566}
+  sqs:
+    pagamentoEfetuado: pagamento-efetuado
+  aws:
+    accesskey: ${AWS_ACCESS_KEY:test}
+    secretkey: ${AWS_SECRET_KEY:test}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  server:
+    servlet:
+      context-path: /actuator
+
+external-apis:
+  mercadopago:
+    url: ${MERCADO_PAGO_URL:https://api.mercadopago.com/}
+    vendedor-id: ${SELLER_ID:827114336}
+    caixa-id: ${CAIXA_ID:LOJALD01POS01}
+    token: ${MERCADO_PAGO_TOKEN:TEST-3657452763101763-100208-0446e47cd6850436418091b63a34c651-827114336}
