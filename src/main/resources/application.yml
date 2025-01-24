@@ -1,14 +1,18 @@
-aws:
-  region: ${AWS_REGION:us-east-1}
+spring:
+  cloud:
+    aws:
+      credentials:
+        access-key: ${AWS_ACCESS_KEY:test}
+        secret-key: ${AWS_SECRET_KEY:test}
+      region:
+        static: ${AWS_REGION:us-east-1}
 
 amazon:
   dynamodb:
     endpoint: ${DYNAMODB_URL:http://host.docker.internal:4566}
   sqs:
+    endpoint: ${SQS_URL:http://host.docker.internal:4566}
     pagamentoEfetuado: pagamento-efetuado
-  aws:
-    accesskey: ${AWS_ACCESS_KEY:test}
-    secretkey: ${AWS_SECRET_KEY:test}
 
 management:
   endpoints:

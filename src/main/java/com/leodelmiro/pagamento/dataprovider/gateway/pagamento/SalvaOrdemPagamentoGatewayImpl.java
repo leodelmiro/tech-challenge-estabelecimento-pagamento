@@ -17,8 +17,9 @@ public class SalvaOrdemPagamentoGatewayImpl implements SalvaOrdemPagamentoGatewa
     private OrdemPagamentoEntityMapper ordemPagamentoEntityMapper;
 
     @Override
-    public void salvar(OrdemPagamento ordemPagamento) {
+    public OrdemPagamento salvar(OrdemPagamento ordemPagamento) {
         var ordemEntity = ordemPagamentoEntityMapper.toOrdemPagamentoEntity(ordemPagamento);
         ordemPagamentoRepository.save(ordemEntity);
+        return ordemPagamentoEntityMapper.toOrdemPagamento(ordemEntity);
     }
 }

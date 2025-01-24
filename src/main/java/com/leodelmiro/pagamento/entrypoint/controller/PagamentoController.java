@@ -13,7 +13,7 @@ public class PagamentoController {
                                                CriaOrdemPagamentoUseCase criaOrdemPagamentoUseCase,
                                                OrdemPagamentoMapper ordemPagamentoMapper) {
         var ordemPagamento = ordemPagamentoMapper.toOrdemPagamento(ordemPagamentoRequest);
-        var itensPedido = ordemPagamentoRequest.items().stream().map(ItemPedidoRequest::toItemPedido).toList();
+        var itensPedido = ordemPagamentoRequest.itens().stream().map(ItemPedidoRequest::toItemPedido).toList();
         var ordemPagamentoCriada = criaOrdemPagamentoUseCase.criar(ordemPagamento, itensPedido);
         return ordemPagamentoMapper.toOrdemPagamentoResponse(ordemPagamentoCriada);
     }

@@ -22,10 +22,4 @@ public class BuscaOrdemPagamentoGatewayImpl implements BuscaOrdemPagamentoGatewa
         OrdemPagamentoEntity ordemPagamento = ordemPagamentoRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Ordem de Pagamento não encontrada"));
         return pedidoEntityMapper.toOrdemPagamento(ordemPagamento);
     }
-
-    @Override
-    public OrdemPagamento buscarPorIdPedido(Long id) {
-        OrdemPagamentoEntity ordemPagamento = ordemPagamentoRepository.findByIdPedido(id).orElseThrow(() -> new IllegalArgumentException("Ordem de Pagamento não encontrada"));
-        return pedidoEntityMapper.toOrdemPagamento(ordemPagamento);
-    }
 }

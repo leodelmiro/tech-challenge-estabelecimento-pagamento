@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.leodelmiro</groupId>
-    <artifactId>estabelecimento</artifactId>
+    <artifactId>pagamento</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Estabelecimento - Tech Challenge</name>
-    <description>Projeto de Pedidos de Estabelecimento Tech Challenge Fiap</description>
+    <name>Estabelecimento - Tech Challenge - App Pagamento</name>
+    <description>Microsserviço de Pagamentos de um Estabelecimento - Tech Challenge Fiap</description>
     <url/>
     <licenses>
         <license/>
@@ -68,7 +68,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>io.awspring.cloud</groupId>
+            <artifactId>spring-cloud-aws-starter</artifactId>
+        </dependency>
+        
         <dependency>
             <groupId>io.awspring.cloud</groupId>
             <artifactId>spring-cloud-aws-starter-sqs</artifactId>

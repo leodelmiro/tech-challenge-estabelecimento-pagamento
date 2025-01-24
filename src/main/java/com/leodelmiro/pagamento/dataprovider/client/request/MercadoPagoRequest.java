@@ -19,7 +19,7 @@ public class MercadoPagoRequest {
     List<ItemPedidoClientRequest> items;
 
     public MercadoPagoRequest(OrdemPagamento ordemPagamento, List<ItemPedido> itemPedidos) {
-        this.externalReference = ordemPagamento.getIdPedido().toString();
+        this.externalReference = ordemPagamento.getId();
         this.title = "Estabelecimento Fiap";
         this.description = "Pedido #" + ordemPagamento.getIdPedido() + "- Estabelecimento Fiap";
         this.totalAmount = ordemPagamento.getPrecoTotal();

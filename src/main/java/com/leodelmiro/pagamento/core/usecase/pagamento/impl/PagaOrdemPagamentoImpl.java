@@ -24,10 +24,10 @@ public class PagaOrdemPagamentoImpl implements PagaPedidoUseCase {
     }
 
     @Override
-    public void pagar(Long idPedido, LocalDateTime pagoEm) {
-        var ordemPagamento = buscaOrdemPagamentoGateway.buscarPorIdPedido(idPedido);
+    public void pagar(String idOrdemPagamento, LocalDateTime pagoEm) {
+        var ordemPagamento = buscaOrdemPagamentoGateway.buscar(idOrdemPagamento);
         ordemPagamento.setPagoEm(pagoEm);
         salvaOrdemPagamentoGateway.salvar(ordemPagamento);
-        publicaMensagemPagamentoEfetuadoGateway.publicar(idPedido.toString());
+        publicaMensagemPagamentoEfetuadoGateway.publicar(ordemPagamento.getIdPedido().toString());
     }
 }
