@@ -9,9 +9,9 @@ spring:
 
 amazon:
   dynamodb:
-    endpoint: ${DYNAMODB_URL:http://host.docker.internal:4566}
+    endpoint: ${DYNAMODB_URL:http://host.docker.internal:4567}
   sqs:
-    endpoint: ${SQS_URL:http://host.docker.internal:4566}
+    endpoint: ${SQS_URL:http://host.docker.internal:4567}
     pagamentoEfetuado: pagamento-efetuado
 
 management:
