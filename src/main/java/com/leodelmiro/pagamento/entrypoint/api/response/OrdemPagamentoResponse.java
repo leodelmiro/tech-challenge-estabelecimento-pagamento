@@ -6,7 +6,7 @@ import com.leodelmiro.pagamento.dataprovider.client.request.ItemPedidoClientRequ
 import java.time.LocalDateTime;
 import java.util.List;
 
-public record OrdemPagamentoResponse(
+public record   OrdemPagamentoResponse(
         @JsonProperty("id")
         String id,
         @JsonProperty("id_pedido")
