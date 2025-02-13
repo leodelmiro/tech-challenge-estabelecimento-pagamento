@@ -15,19 +15,19 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
-@EnableDynamoDBRepositories(basePackages = "com.leodelmiro.cliente.dataprovider.repository")
+@EnableDynamoDBRepositories(basePackages = "com.leodelmiro.pagamento.dataprovider.repository")
 public class DynamoDBConfig {
 
     @Value("${amazon.dynamodb.endpoint}")
     private String endpoint;
 
-    @Value("${amazon.aws.accesskey}")
+    @Value("${spring.cloud.aws.credentials.access-key}")
     private String accessKey;
 
-    @Value("${amazon.aws.secretkey}")
+    @Value("${spring.cloud.aws.credentials.secret-key}")
     private String secretKey;
 
-    @Value("${aws.region}")
+    @Value("${spring.cloud.aws.region.static}")
     private String region;
 
     private AWSCredentialsProvider awsDynamoDBCredentials() {

@@ -8,7 +8,6 @@ public class WebhookController {
     public static void pagar(String signature,
                              MercadoPagoRequest mercadoPagoRequest,
                              PagaPedidoUseCase pagaPedidoUseCase) {
-        pagaPedidoUseCase.pagar(Long.valueOf(mercadoPagoRequest.data().id()),
-                mercadoPagoRequest.createdAt().toLocalDateTime());
+        pagaPedidoUseCase.pagar(mercadoPagoRequest.data().id(), mercadoPagoRequest.createdAt().toLocalDateTime());
     }
 }

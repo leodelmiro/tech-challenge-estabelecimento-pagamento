@@ -20,8 +20,9 @@ public class CriaOrdemPagamentoUseCaseImpl implements CriaOrdemPagamentoUseCase 
 
     @Override
     public OrdemPagamento criar(OrdemPagamento ordemPagamento, List<ItemPedido> itensPedido) {
+        ordemPagamento = salvaOrdemPagamentoGateway.salvar(ordemPagamento);
         ordemPagamento.setQrCode(gerarQrCodeGateway.gerar(ordemPagamento, itensPedido));
-        salvaOrdemPagamentoGateway.salvar(ordemPagamento);
+        ordemPagamento = salvaOrdemPagamentoGateway.salvar(ordemPagamento);
         return ordemPagamento;
     }
 }

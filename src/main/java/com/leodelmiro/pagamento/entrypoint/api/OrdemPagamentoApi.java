@@ -2,7 +2,6 @@ package com.leodelmiro.pagamento.entrypoint.api;
 
 import com.leodelmiro.pagamento.core.usecase.pagamento.BuscaOrdemPagamentoUseCase;
 import com.leodelmiro.pagamento.core.usecase.pagamento.CriaOrdemPagamentoUseCase;
-import com.leodelmiro.pagamento.dataprovider.client.response.QrCodeResponse;
 import com.leodelmiro.pagamento.entrypoint.api.mapper.OrdemPagamentoMapper;
 import com.leodelmiro.pagamento.entrypoint.api.request.OrdemPagamentoRequest;
 import com.leodelmiro.pagamento.entrypoint.api.response.OrdemPagamentoResponse;
