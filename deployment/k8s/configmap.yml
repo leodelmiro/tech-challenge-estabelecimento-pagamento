@@ -6,7 +6,7 @@ metadata:
 data:
   db_url: dynamodb.us-east-1.amazonaws.com
   sqs_url: sqs.us-east-1.amazonaws.com
-  aws_access_key: "{{AWS_ACCESS_KEY_ID}}"
-  aws_secret_key: "{{AWS_SECRET_ACCESS_KEY}}"
   mercado_pago_url: "https://api.mercadopago.com/"
   mercado_pago_token: "TEST-3657452763101763-100208-0446e47cd6850436418091b63a34c651-827114336"
+  aws_access_key: "{{AWS_ACCESS_KEY_ID}}"
+  aws_secret_key: "{{AWS_SECRET_ACCESS_KEY}}"
