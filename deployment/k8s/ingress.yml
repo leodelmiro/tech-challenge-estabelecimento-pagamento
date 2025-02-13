@@ -18,7 +18,16 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /api/v1/pagamentos
+            pathType: Prefix
+            backend:
+              service:
+                name: backend-pagamento-svc
+                port:
+                  number: 80
+    - http:
+        paths:
+          - path: /api/v1/webhooks
             pathType: Prefix
             backend:
               service:
