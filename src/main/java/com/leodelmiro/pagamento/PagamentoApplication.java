@@ -14,6 +14,4 @@ public class PagamentoApplication {
     public static void main(String[] args) {
         SpringApplication.run(PagamentoApplication.class, args);
     }
-    /* TODO ADICIONAR COBERTURA DE TESTES 80% NA PIPELINE PARA DEV E INTEGRAÇÃO RODANDO PÓS DEV, GITHUB ACTIONS E INFRA SQS, REMOVER DEP DE SQL*/
-
 }
