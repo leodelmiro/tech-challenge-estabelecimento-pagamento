@@ -52,6 +52,11 @@ spec:
                 configMapKeyRef:
                   name: backend-pagamento-configmap
                   key: aws_secret_key
+            - name: AWS_SESSION_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-pagamento-configmap
+                  key: aws_session_token
             - name: MERCADO_PAGO_URL
               valueFrom:
                 configMapKeyRef:

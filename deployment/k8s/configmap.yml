@@ -10,3 +10,4 @@ data:
   mercado_pago_token: "TEST-3657452763101763-100208-0446e47cd6850436418091b63a34c651-827114336"
   aws_access_key: "{{AWS_ACCESS_KEY_ID}}"
   aws_secret_key: "{{AWS_SECRET_ACCESS_KEY}}"
+  aws_session_token: "{{AWS_SESSION_TOKEN}}"
