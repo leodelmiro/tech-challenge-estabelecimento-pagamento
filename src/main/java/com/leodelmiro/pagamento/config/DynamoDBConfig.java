@@ -3,6 +3,7 @@ package com.leodelmiro.pagamento.config;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
+import com.amazonaws.auth.BasicSessionCredentials;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -27,12 +28,15 @@ public class DynamoDBConfig {
     @Value("${spring.cloud.aws.credentials.secret-key}")
     private String secretKey;
 
+    @Value("${spring.cloud.aws.credentials.session}")
+    private String sessionToken;
+
     @Value("${spring.cloud.aws.region.static}")
     private String region;
 
     private AWSCredentialsProvider awsDynamoDBCredentials() {
         return new AWSStaticCredentialsProvider(
-                new BasicAWSCredentials(accessKey, secretKey));
+                new BasicSessionCredentials(accessKey, secretKey, sessionToken));
     }
 
     @Primary
