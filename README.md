@@ -1,4 +1,4 @@
-# Tech Challenge - Estabelecimento - APP Pagamento
+# Tech Challenge - Estabelecimento - App Pagamento
 
 # Índice
 
@@ -9,6 +9,7 @@
 * [Estrutura do Projeto](#Estrutura-do-Projeto)
 * [Rodando o Projeto Local](#Rodando-o-Projeto-Local)
 * [Endpoints](#Endpoints)
+* [Sonar Coverage](#Sonar-Coverage)
 
 ## Breve Descrição
 
@@ -121,3 +122,7 @@ url http://localhost:8080/swagger-ui/index.html
 **Caso preferir pode importar a collection Insomnia que se encontra no projeto, no arquivo Insomnia Collection, porém
 será
 necessário o Insomnia instalado.**
+
+## Sonar Coverage
+![Sonar coverage](sonar-coverage.png)
+https://sonarcloud.io/summary/overall?id=com.leodelmiro%3Apagamento&branch=master
